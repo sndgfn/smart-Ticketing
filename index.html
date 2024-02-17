@@ -1,11 +1,273 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Ticketing</title>
+    <!-- daisy UI and Tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <!-- tailwind custom color -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .min-h-custom {
+            min-height: 700px;
+
+        }
+    </style>
+
 </head>
+
 <body>
-    
+    <header>
+        <section class="container mx-auto">
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+
+                    </div>
+                    <a class="btn btn-ghost text-3xl text-black font-bold">P-Ticket</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1">
+                        <li>
+                            <a>Home</a>
+                        </li>
+                        <li>
+                            <a>About</a>
+                        </li>
+                        <li><a>Destination</a></li>
+                        <li><a>Search</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <a class="btn px-9 bg-[#1DD1001A]"><span class="font-bold text-xl text-green-500">Bus</span>
+                        <img src="images/bus-icon.png" alt="">
+                    </a>
+
+                </div>
+            </div>
+        </section>
+        <!-- banner section -->
+        <section class="container mx-auto mt-12">
+            <div class=" hero min-h-custom  rounded-3xl" style="background-image:url(images/banner.png) ">
+                <div class=" "></div>
+                <div class="hero-content text-center text-neutral-content">
+                    <div class="space-y-14">
+                        <h1 class="mb-2 text-6xl font-bold">End-to-End Travel with <br><span class="text-[#1DD100]"> P
+                                Paribahan</span></h1>
+                        <p class="mb-5 text-xl">Yes, you can run unit tests and view the results directly within the
+                            app. <br> The integrated testing features allow for a streamlined .</p>
+                        <button class=" text-xl text-black font-bold rounded-xl bg-[#1DD100] px-7 py-5 btn-primary">Buy
+                            Tickets</button>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+    </header>
+    <main>
+        <!-- best offer section -->
+        <section class="container mx-auto mt-12">
+            <div>
+                <h3 class="text-4xl font-bold tems-center flex justify-center">Best offers for you</h3>
+
+                <div class="main flex mt-12  justify-center">
+                    <!-- 15% off -->
+                    <div
+                        style="background-image: url(images/Rectangle\ 8\ \(1\).png); background-repeat: no-repeat; height: 220px;">
+
+                        <div class="flex px-12 gap-x-20">
+                            <div class="py-12 space-y-4">
+                                <h1 class="text-3xl font-bold">15% OFF</h1>
+                                <p class="font-semibold">on your next purchase</p>
+                                <p class="
+                            text-[#030712CC] ">use by January 2024</p>
+                            </div>
+                            <div><img src="images/cupon-devider.png" alt=""></div>
+                            <div class="space-y-4 py-16">
+                                <h1 class="text-3xl font-bold">NEW15</h1>
+                                <p class="text-xl  text-[#030712CC]">Coupon Code</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- 20% off -->
+                    <div
+                        style="background-image: url(images/Rectangle\ 8\ \(2\).png); background-repeat: no-repeat; height: 220px;">
+
+                        <div class="flex px-12 gap-x-20">
+                            <div class="py-12 space-y-4">
+                                <h1 class="text-3xl font-bold">20% OFF</h1>
+                                <p class="font-semibold">on your next purchase</p>
+                                <p class="
+                        text-[#030712CC] ">use by January 2024</p>
+                            </div>
+                            <div><img src="images/cupon-devider.png" alt=""></div>
+                            <div class="py-16 space-y-4">
+                                <h1 class="text-3xl font-bold">Couple 20</h1>
+                                <p class="text-xl  text-[#030712CC]">Coupon Code</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="flex mt-16 justify-center">
+                    <button class=" text-xl px-8   font-bold border-[#1DD100] bg-transparent text-[#1DD100] btn">See All
+                        Offers</button>
+                </div>
+            </div>
+
+        </section>
+        <!-- p.h paribahan -->
+        <section class="container mx-auto mt-32  ">
+            <div class=" text-center  space-y-6 ">
+                <h3 class="text-5xl font-bold">P.H Paribahan</h3>
+                <p class="text-xl font-normal">Yes, you can run unit tests and view the results directly within the app.
+                    The integrated <br> testing features allow for a streamlined .</p>
+            </div>
+        </section>
+
+        <!--sub-section (greenline_paribahan) -->
+        <section class="container mx-auto">
+            <div class="bg-slate-400  justify-between  flex">
+                <div>
+                    <!-- just uprer ta -->
+                    <div class="flex  justify-between ">
+                        <div class=" p-15 flex gap-3 ">
+                            <div>
+                                <img src="images/bus-logo.png" alt="">
+                            </div>
+                            <div>
+                                <h4 class="text-3xl font-bold">Greenline Paribahan</h4>
+                                <p class="font-bold opacity-50 text-xl">Coach-009-WEB ! AC_Business</p>
+                            </div>
+                        </div>
+                        <div class="navbar-end">
+                            <a class="btn px-7 bg-[#1DD1001A]">
+                                <img src="images/seat-green.png" alt="">
+                                <span class="font-bold text-xl text-green-500">40Seats left</span>
+
+                            </a>
+                        </div>
+                    </div>
+                    <!-- input section -->
+                    <div class="bg-slate-100 mt-6 rounded-3xl px-8 py-8 ">
+                        <div class="flex  justify-between">
+                            <p class="text-xl font-semibold opacity-45">Route</p>
+                            <p class="text-xl text-black font-semibold ">Dhaka - Sylhet</p>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="flex  justify-between">
+                            <p class="text-xl font-semibold opacity-45">Departure Time</p>
+                            <p class="text-xl text-black font-semibold ">9:00 PM</p>
+                        </div>
+                        <br><br>
+                        <div class="flex gap-10 ">
+                            <div class="p-x-2 w-60 items-center justify-center flex rounded-xl bg-slate-400">
+                                <p class="text-xl font-medium  opacity-80">Boarding Point - Laxmipur</p>
+                            </div>
+                            <div class="p-x-2 w-60 items-center justify-center flex rounded-xl bg-slate-400">
+                                <p class="text-xl font-medium opacity-80">Dropping Point - Bogura</p>
+                            </div>
+                            <div class="p-2 w-60 justify-center flex rounded-xl bg-slate-400">
+                                <p class="text-xl font-medium opacity-80">Est. Time - 11 Hour</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div>
+                    <img src="images/info-devider.png" alt="">
+                </div>
+                <div>
+                    <img src="images/fare.png" alt="">
+                    <h2 class="text-3xl font-bold">550 Taka</h2>
+                    <p class="text-2xl font-bold opacity-60">Per Seat</p>
+
+
+                </div>
+
+            </div>
+        </section>
+        <!-- ticket section -->
+        <section class="container mx-auto">
+            <div class="mt-6">
+                <div>
+                    <h3 class="text-2xl font-semibold">Select Your Seat</h3>
+                    <hr class="mt-6">
+                    <div class="flex justify-between">
+                        <div class="flex  gap-2">
+                            <img src="images/seat-gray.png" alt="">
+                            <p class="text-xl font-medium opacity-50">Available</p>
+                        </div>
+
+                        <div class="flex  gap-2">
+                            <img src="images/seat-green-filled.png" alt="">
+                            <p class="text-xl font-medium text-[#1DD100] opacity-50">Selected</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-between mt-11">
+                        <div></div>
+                        <div class="bg-[#0307121A] p-12 py-4  rounded-xl"><img
+                                src="images/tabler-icon-steering-wheel.png" alt=""></div>
+                    </div>
+                </div>
+
+                <!-- seat -->
+                <div class="flex gap-28 ">
+                    <div>
+                        <span class="p-4">A</span>
+                        <button class="btn btn-active px-8 btn-neutral">A1</button>
+                        <button class="btn btn-active px-8 btn-neutral">A2</button>
+                    </div>
+                    <div>
+                        <button class="btn btn-active px-8 btn-neutral">A3</button>
+                        <button class="btn btn-active px-8 btn-neutral">A4</button>
+                    </div>
+                </div>
+                <br>
+
+            </div>
+
+
+
+
+
+
+            <div>cost details</div>
+            </div>
+        </section>
+
+
+
+    </main>
+
 </body>
+
 </html>
