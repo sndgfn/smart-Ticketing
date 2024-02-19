@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button Selection</title>
+  <style>
+    /* Optional: Some basic styling for the buttons */
+    .myButton {
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<div>
+  <p class="text-xl font-medium">Selected Buttons: <span id="selectedCount">0</span></p>
+  <p class="text-xl font-medium">Seats Left: <span id="seatsLeft">40</span></p>
+</div>
+
+<!-- Repeat this button HTML for each of your 40 buttons -->
+<button class="myButton">Button 1</button>
+<button class="myButton">Button 2</button>
+<!-- Add more buttons as needed -->
+
+<script>
+
+  var selectedButtons = [];
+  var selectedCountElement = document.getElementById("selectedCount");
+  var seatsLeftElement = document.getElementById("seatsLeft");
+  var buttons = document.querySelectorAll(".myButton");
+  buttons.forEach(function(button) {
+    button.addEventListener("click", function() {
+      
+      if (selectedButtons.includes(this)) {
+        this.style.backgroundColor = "";
+        selectedButtons = selectedButtons.filter(item => item !== this);
+      } else {
+        if (selectedButtons.length < 4) {
+          this.style.backgroundColor = "green"; // Set the color to green
+          selectedButtons.push(this);
+        }
+      }
+      selectedCountElement.textContent = selectedButtons.length;
+
+      
+      var seatsLeft = 40 - selectedButtons.length;
+      seatsLeftElement.textContent = seatsLeft;
+    });
+  });
+</script>
+
+</body>
+</html>
